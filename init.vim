@@ -5,6 +5,8 @@ set autochdir
 set encoding=utf-8
 set noshowmode
 
+autocmd BufRead,BufNewFile *.jinja2 set syntax=htmldjango
+
 let g:python3_host_prog = '/anaconda3/bin/python3'
 let g:python_host_prog  = '/usr/local/bin/python2'
 
@@ -17,6 +19,11 @@ Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'mhinz/vim-signify'
+Plug 'tweekmonster/django-plus.vim'
+Plug 'lervag/vimtex'
+Plug 'Konfekt/FastFold'
+Plug 'matze/vim-tex-fold'
+Plug 'numkil/ag.nvim'
 
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -50,6 +57,14 @@ let g:airline#extensions#hunks#enabled = 0
 let g:airline_powerline_fonts = 1
 
 let g:echodoc#enable_at_startup = 1
+
+let g:text_flavor = 'latex'
+let g:text_conceal = ''
+let g:vimtext_fold_manual = 1
+let g:vimtext_latexmk_continuous = 1
+let g:vimtext_compiler_progname = 'nvr'
+
+let g:vimtext_view_method = 'skim'
 
 " Keybindings
 map <M-/> :NERDTreeToggle<CR>
