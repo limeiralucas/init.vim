@@ -24,6 +24,7 @@ Plug 'lervag/vimtex'
 Plug 'Konfekt/FastFold'
 Plug 'matze/vim-tex-fold'
 Plug 'numkil/ag.nvim'
+Plug 'wakatime/vim-wakatime'
 
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
